@@ -1,0 +1,25 @@
+/*
+ * Theme color does not change everywhere
+ */
+.navigator-holder a:hover,
+.widget_categories li:hover,
+.secondary-navigation .tinynav {
+	background-color: @theme-color;
+}
+.error-404 h3,
+.fourzerofour,
+.site-title a:hover {
+	color: @theme-color;
+}
+
+/* Lower z-index then WordPress admin bar */
+.menu-footer,
+.menu-footer ul,
+.menu-footer ul li,
+.menu-footer ul li a,
+.menu-footer,
+.main-navigation ul,
+.srchcontainer,
+ul.bjqs-controls {
+	z-index: 999;
+}
