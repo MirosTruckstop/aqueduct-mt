@@ -6,4 +6,4 @@ Version: 1.0.0
 Template: aqueduct
 Text Domain: aqueductmt
 */
-@import url('css/main.css');
+@import url('dist/aqueduct-mt.min.css');
