@@ -1,5 +1,3 @@
-@font-size-smaller: 11px;
-
 /* Messages */
 .style_grew {
 	color: #666666;
@@ -14,8 +12,8 @@
 }
 /* Selection bar */
 #auswahl_leiste {
-	font-size: 11px;
-	background-image:  url('@{images}/table_th_orange.png');
+	font-size: @font-size-smaller;
+	background: @theme-color;
 	
 	table {
 		th {
@@ -56,6 +54,8 @@
 }
 /* Itemscope */
 div.photo {
+	margin-bottom: 15px;
+
 	span[itemprop="keywords"] {
 		display:none;
 	}
@@ -63,4 +63,5 @@ div.photo {
 	img {
 		max-width: 750px;
 	}
+
 }
