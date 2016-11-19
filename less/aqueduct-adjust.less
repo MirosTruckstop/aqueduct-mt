@@ -30,7 +30,14 @@
 	font-weight: normal;
 }
 
-/* Smaller site title */
+/*
+ * Smaller site title
+ */
 .site-branding .site-title {
 	font-size: 46px;
+}
+@media (max-width: (@screen-normal - 1)) {
+	.site-branding .site-title {
+		font-size: 39px;
+	}
 }

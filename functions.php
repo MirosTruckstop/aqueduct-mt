@@ -18,7 +18,6 @@ function aqueductmt_enqueue_styles() {
 	);
 }
 
-
 /*
  * Deactive sidebar for mobile devices.
  */
