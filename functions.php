@@ -16,6 +16,38 @@ function aqueductmt_enqueue_styles() {
 		array( $parent_style ),
 		wp_get_theme()->get('Version')
 	);
+
+	$colorSetting = get_theme_mod("color-setting");
+	$customizedCss = <<<EOT
+#auswahl_leiste,
+.break-social {
+	background-color: $colorSetting;
+}
+
+/*--------------------------------------------------------------
+Aqueduct fix:
+
+Theme color does not change everywhere
+--------------------------------------------------------------*/
+.navigator-holder a:hover,
+.widget_categories li:hover,
+.secondary-navigation .tinynav {
+	background-color: $colorSetting;
+}
+
+.error-404 h3,
+.fourzerofour,
+a:hover,
+a:focus,
+a:active {
+	color: $colorSetting !important;
+}
+
+.main-navigation ul li a {
+	color: #fff !important;
+}
+EOT;
+	wp_add_inline_style( 'aqueduct-mt', $customizedCss);
 }
 
 /*
