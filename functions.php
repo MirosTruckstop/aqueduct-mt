@@ -32,7 +32,7 @@ Theme color does not change everywhere
 .navigator-holder a:hover,
 .widget_categories li:hover,
 .secondary-navigation .tinynav {
-	background-color: $colorSetting;
+	background-color: $colorSetting !important;
 }
 
 .error-404 h3,
