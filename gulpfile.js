@@ -1,26 +1,27 @@
-/*global require, module, __dirname */
-var gulp = require('gulp'),
-	cleanCss = require('gulp-clean-css'),
-	less = require('gulp-less'),
-	rename = require('gulp-rename'),
-	path = require('path');
+'use strict';
 
-gulp.task('default', ['styles', 'watch']);
+const cleanCss = require('gulp-clean-css');
+const gulp = require('gulp');
+const less = require('gulp-less');
+const rename = require('gulp-rename');
+const path = require('path');
 
-gulp.task('watch', function () {
-	gulp.watch('src/less/*.less', ['styles']);
-});
-
-gulp.task('styles', function () {
-	return gulp.src('src/less/main.less')
+function styles() {
+	return gulp
+		.src('src/less/main.less')
 		.pipe(less({
 			paths: [ path.join(__dirname, 'less', 'includes') ]
 		}))
-		.pipe(rename({
-			basename: 'aqueduct-mt',
-			suffix: '.min'
-		}))
+		.pipe(rename({basename: 'aqueduct-mt', suffix: '.min'}))
 		.pipe(cleanCss({compatibility: 'ie8'}))
 		.pipe(gulp.dest('dist/'))
 		;
-});
+}
+
+function watch() {
+	gulp.watch('src/less/*.less', styles);
+}
+
+exports.styles = styles;
+exports.watch = watch;
+exports.default = gulp.series(styles, watch);
