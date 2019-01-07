@@ -2,18 +2,18 @@
 	"name": "aquaduct-mt",
 	"version": "0.1.0",
 	"devDependencies": {
-		"gulp": "3.9.x",
-		"gulp-clean-css": "2.0.x",
-		"gulp-concat": "2.6.x",
-		"gulp-less": "3.1.x",
-		"gulp-load-plugins": "1.2.x",
-		"gulp-notify": "2.2.x",
-		"gulp-rename": "1.2.x",
-		"gulp-size": "2.1.x",
-		"gulp-uglify": "1.5.x",
-		"gulp-util": "3.0.x",
-		"html-loader": "0.4.x",
-		"require-dir": ">=0.3.2 <=0.3.x",
-		"url": "0.11.x"
+		"gulp": "^3.9.1",
+		"gulp-clean-css": "^4.0.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-less": "^4.0.1",
+		"gulp-load-plugins": "^1.5.0",
+		"gulp-notify": "^3.2.0",
+		"gulp-rename": "^1.4.0",
+		"gulp-size": "^3.0.0",
+		"gulp-uglify": "^3.0.1",
+		"gulp-util": "^3.0.8",
+		"html-loader": "^0.5.5",
+		"require-dir": "^1.2.0",
+		"url": "^0.11.0"
 	}
 }
