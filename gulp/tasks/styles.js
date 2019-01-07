@@ -4,16 +4,13 @@ var config = require('../config').styles,
 	gulp = require('gulp'),
 	less = require('gulp-less'),
 	rename = require('gulp-rename'),
-	cleanCss = require('gulp-clean-css'),
-	util = require('gulp-util'),
-	notify = require('gulp-notify');
+	cleanCss = require('gulp-clean-css');
 
 gulp.task('styles', function () {
 	return gulp.src(config.src)
 		.pipe(less({
 			paths: [ path.join(__dirname, 'less', 'includes') ]
 		}))
-		.on('error', handleError)
 		.pipe(rename({
 			basename: config.basename,
 			suffix: '.min'
@@ -22,13 +19,3 @@ gulp.task('styles', function () {
 		.pipe(gulp.dest(config.dest))
 		;
 });
-
-var handleError = function (err) {
-	new util.log(err);
-	notify.onError({
-		title: err.plugin+' error',
-		message: path.basename(err.filename)+" on line "+err.line+":"+err.column,
-		sound: false
-	})(err);
-	this.emit('end');
-};
