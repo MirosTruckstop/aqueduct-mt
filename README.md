@@ -12,3 +12,8 @@ Requirements
 Steps
 1. Install the dependencies: `npm install`
 2. Watch changes: `./node_modules/gulp/bin/gulp.js`
+
+Sync the required files
+```sh
+rsync -r --relative README.md *.php *.css dist/ <host>:<wordpress-dir>/wp-content/themes/aqueduct-mt/
+```
