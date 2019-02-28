@@ -1,7 +1,4 @@
 <?php
-// Set local for correct dates.
-setlocale(LC_ALL, get_locale().'.'.get_bloginfo('charset'));
-
 /**
  * Include styles and scripts.
  */
